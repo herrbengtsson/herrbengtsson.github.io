@@ -1,9 +1,9 @@
-name: Your New Jekyll Site
+name: My 2 bits in cyberspace
 description: Blogging about stuffs
 meta_description: "Your New Jekyll Site, Blogging about stuffs"
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 logo: false
 paginate: 15
 baseurl: /
@@ -13,4 +13,4 @@ gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url:            'blog url'
-author:         'Your Name'
+author:         'Axel'

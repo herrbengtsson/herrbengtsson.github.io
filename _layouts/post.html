@@ -5,33 +5,29 @@ archive: false
 post_class: post-template
 ---
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
-    <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
-        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
+<header class="main-header post-head" style="{% if page.cover %}background-image: url({{ page.cover }}){% endif %}">
+    <nav class="main-nav overlay clearfix">
+        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}"></a>
+        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml"></a>
     </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{ page.title }}</h1>
+            <h2 class="page-description">
+                {% if page.description %} {{ page.description }} {% endif %}
+            </h2>
+            <section class="post-meta">
+                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">
+                    {{ page.date | date:"%Y-%m-%d" }}
+                </time>
+            </section>
+        </div>
+    </div>
 </header>
 
 <main class="content" role="main">
 
     <article class="post">
-
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <section class="post-meta">
-                {% if page.author %}
-                    {{ page.author }}
-                {% elsif site.author %}
-                    {{ site.author }}
-                {% endif %}
-                {% if page.categories.size > 0 %}
-                    {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
-                {% endif %}
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">
-                    {{ page.date | date:"%Y-%m-%d" }}
-                </time>
-            </section>
-        </header>
 
         <section class="post-content">
             {{content}}
@@ -42,7 +38,7 @@ post_class: post-template
             <h5>Archive</h5>
             <ul>
                 {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
+                    <li><span>{{ post.date | date:"%Y-%m-%d" }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </section>

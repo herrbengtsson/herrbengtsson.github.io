@@ -111,21 +111,21 @@ table { border-collapse: collapse; border-spacing: 0; }
   font-family: 'Vollkorn Bold';
   font-style: normal;
   font-weight: bold;
-  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url('http://themes.googleusercontent.com/font?kit=gOwQjJVGXlDOONC12hVoBqCWcynf_cDxXwCLxiixG1c') format('truetype');
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url('//themes.googleusercontent.com/font?kit=gOwQjJVGXlDOONC12hVoBqCWcynf_cDxXwCLxiixG1c') format('truetype');
 }
 
 @font-face {
   font-family: 'Droid Serif Bold';
   font-style: normal;
   font-weight: bold;
-  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('http://themes.googleusercontent.com/font?kit=QQt14e8dY39u-eYBZmppwXe1Pd76Vl7zRpE7NLJQ7XU') format('truetype');
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('//themes.googleusercontent.com/font?kit=QQt14e8dY39u-eYBZmppwXe1Pd76Vl7zRpE7NLJQ7XU') format('truetype');
 }
 
 @font-face {
   font-family: 'Droid Serif';
   font-style: normal;
   font-weight: normal;
-  src: local('Droid Serif'), local('DroidSerif'), url('http://themes.googleusercontent.com/font?kit=DgAtPy6rIVa2Zx3Xh9KaNaCWcynf_cDxXwCLxiixG1c') format('truetype');
+  src: local('Droid Serif'), local('DroidSerif'), url('//themes.googleusercontent.com/font?kit=DgAtPy6rIVa2Zx3Xh9KaNaCWcynf_cDxXwCLxiixG1c') format('truetype');
 }
 
 /* ==========================================================================
@@ -363,7 +363,12 @@ code, tt {
     border-radius: 2px;
 }
 
-pre {
+.highlight pre {
+    margin: 0;
+    padding: 0;
+}
+
+/*pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 0 1.75em 0;
@@ -376,7 +381,7 @@ pre {
     overflow: auto;
     background: #F7FAFB;
     border-radius: 3px;
-}
+}*/
 
 pre code, tt {
     font-size: inherit;
@@ -820,9 +825,14 @@ body:not(.post-template) .post-title {
     margin-left: 8px;
     padding-left: 12px;
     border-left: #d5dbde 1px solid;
-    text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
+}
+
+.main-header .post-date {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
 }
 
 .user-image {

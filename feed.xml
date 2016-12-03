@@ -15,7 +15,8 @@ layout: null
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <author>{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</author>
-        <description>{{ post.content | xml_escape }}</description>
+        <summary type="xhtml">{{ post.excerpt | xml_escape }}</summary>
+        <content type="xhtml">{{ post.content | xml_escape }}</content>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.domain_name }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.domain_name }}</guid>

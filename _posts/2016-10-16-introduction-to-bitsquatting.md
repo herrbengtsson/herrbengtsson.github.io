@@ -32,7 +32,7 @@ A bitflip can occur for a number of reasons; when writing a file to disk, due to
 
 ### What is bitsquatting
 
-Bitsquatting is the act of registering bitflipped domains in an attempt to abuse the misdirected traffic trickling in to the server, caused by bitflips in the domain name at the client or supporting servers (such as proxies, DNS or Web servers). First introduced by Artem Dinaburg back in 2011 on [DEF CON 19][dinaburg-defcon19], the attack vector has been proven to be [used][[bitsquatting_www2013] and [useful][schultz-defcon21] in the wild.
+Bitsquatting is the act of registering bitflipped domains in an attempt to abuse the misdirected traffic trickling in to the server, caused by bitflips in the domain name at the client or supporting servers (such as proxies, DNS or Web servers). First introduced by Artem Dinaburg back in 2011 on [DEF CON 19][dinaburg-defcon19], the attack vector has been proven to be [used][bitsquatting_www2013] and [useful][schultz-defcon21] in the wild.
 
 Artem Dinaburg conducted empirical research by registering 32 bitflipped versions of high-traffic domains belonging to Facebook, Microsoft, Google, Amazon, and Akamai. Except for three events that caused significant traffic spikes, an average of 59 request per day trickled in to the server. This was back in 2011 and [according to Wikipedia][wiki-traffic] the global traffic has increased 2.3 times between 2011 and 2015. Dinaburg’s research suggests that mobile devices are particularly susceptible for bitflipping in memory and the mobile traffic has increased 6.2 times since the research.
 

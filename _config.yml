@@ -1,6 +1,6 @@
 name: My 2 bits in cyberspace
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+description: Itsec, web dev and generally shitpoasting
+meta_description: "Itsec, web dev and generally shitpoasting"
 markdown: kramdown
 kramdown:
   input: GFM
@@ -9,8 +9,8 @@ logo: false
 paginate: 15
 baseurl: /
 permalink: /:year/:month/:day/:title/
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
+domain_name: 'https://herrbengtsson.github.com'
+google_analytics: 'UA-88402567-1'
 gems: [jekyll-paginate]
 
 # Details for the RSS feed generator

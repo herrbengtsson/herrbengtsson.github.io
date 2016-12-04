@@ -87,6 +87,8 @@ Just like dnstwist, this tool is a generic domain generating and resolving tool 
 * [Github: bitsquat_rpz (mirror)][schultz-bitsquat_rpz]
 * [Morningstar URLCrazy][tool-urlcrazy]
 
+Cover photo "Old memories" by Csaba J. Szabo, from [FreeImages.com][http://www.freeimages.com/photo/old-memories-1458085]
+
 [wiki-cybersquatting]: https://en.wikipedia.org/wiki/Cybersquatting
 [wiki-traffic]: https://en.m.wikipedia.org/wiki/Internet_traffic#Global_Internet_traffic
 [wiki-rpz]: https://en.wikipedia.org/wiki/Response_policy_zone

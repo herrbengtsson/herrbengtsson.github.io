@@ -8,7 +8,7 @@ categories: [CSV, Attack vectors, Test files, Mental notes]
 
 ### Introduction
 
-CSV injection is the technique to leverage the fact that Excel executes the formulas embedded in a [CSV][wiki-csv]. The technique has been [covered][contextis] by plenty of [others][zsec-dangers-mitigation], and even used successfully in [bug][hackerone-hackerone] [bounties][zsec-pornhub], so I will not repeat myself.
+CSV injection is the technique to leverage the fact that Excel executes the formulas embedded in a [CSV][wiki-csv]. The technique has been [covered][contextis] by [plenty][securelayer7] of [others][zsec-dangers-mitigation], and even used successfully in [bug][hackerone-hackerone] [bounties][zsec-pornhub], so I will not repeat myself.
 
 ### Test files
 
@@ -42,6 +42,7 @@ As always, this requires that the eight planets is aligned to work. First of, th
 * [Wikipedia: CSV][wiki-csv]
 * [Context: Comma Separated Vulnerabilities][contextis]
 * [OWASP: CSV Excel Macro Injection][owasp]
+* [SecureLayer7: Everything about the CSV Excel Macro Injection][securelayer7]
 * [ZeroSec: CSV Injection Revisited - Making Things More Dangerous(and fun)][zsec-dangers-mitigation]
 * [ZeroSec: CSV Injection -> Meterpreter on Pornhub][zsec-pornhub]
 * [hackeone: CSV Injection with the CVS export feature][hackerone-hackerone]
@@ -54,3 +55,4 @@ As always, this requires that the eight planets is aligned to work. First of, th
 [hackerone-hackerone]: https://hackerone.com/reports/72785
 [hackerone-pornhub]: https://hackerone.com/reports/146593
 [xpnsec]: https://xpnsec.tumblr.com/post/133298850231/from-csv-to-meterpreter
+[securelayer7]: http://blog.securelayer7.net/how-to-perform-csv-excel-macro-injection/

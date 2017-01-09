@@ -87,6 +87,8 @@ Just like dnstwist, this tool is a generic domain generating and resolving tool 
 * [Github: bitsquat_rpz (mirror)][schultz-bitsquat_rpz]
 * [Morningstar URLCrazy][tool-urlcrazy]
 
+Cover photo "Old memories" by Csaba J. Szabo, from [FreeImages.com](http://www.freeimages.com/photo/old-memories-1458085)
+
 [wiki-cybersquatting]: https://en.wikipedia.org/wiki/Cybersquatting
 [wiki-traffic]: https://en.m.wikipedia.org/wiki/Internet_traffic#Global_Internet_traffic
 [wiki-rpz]: https://en.wikipedia.org/wiki/Response_policy_zone
@@ -96,9 +98,11 @@ Just like dnstwist, this tool is a generic domain generating and resolving tool 
 [github-dnstwist]: https://github.com/elceef/dnstwist
 [tool-urlcrazy]: https://www.morningstarsecurity.com/research/urlcrazy
 [dinaburg-bitsquatting]: http://dinaburg.org/bitsquatting.html
+[dinaburg-slides]: http://dinaburg.org/data/DC19_Dinaburg_Presentation.pdf
 [dinaburg-defcon19]: https://www.youtube.com/watch?v=lZ8s1JwtNas
 [dinaburg-blackhat2011]: https://www.youtube.com/watch?v=_si0FYl_IOA/
 [schultz-defcon21]: https://www.youtube.com/watch?v=j2FVFVHVvgg
+[schultz-slides]: http://archive.icann.org/meetings/buenosaires2013/en/schedule/mon-tech/presentation-bitsquatting-18nov13-en.pdf
 [schultz-bitsquat_rpz]: http://data.0xfeedcafe.com/bitsquat_rpz.pl
 [schultz-whitepaper]: http://blogs.cisco.com/wp-content/uploads/Schultz-Examining_the_Bitsquatting_Attack_Surface-whitepaper.pdf
 [github-schultz-mirror]: https://gist.github.com/symm/7856106

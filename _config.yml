@@ -1,6 +1,6 @@
 name: My 2 bits in cyberspace
-description: Itsec, web dev and generally shitpoasting
-meta_description: "Itsec, web dev and generally shitpoasting"
+description: A blog about IT-security, web development but mostly personal notes
+meta_description: "A blog about IT-security, web development but mostly personal notes"
 markdown: kramdown
 kramdown:
   input: GFM

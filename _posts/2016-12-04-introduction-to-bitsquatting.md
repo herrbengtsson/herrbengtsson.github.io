@@ -10,6 +10,7 @@ cover: /assets/images/old-memories-1458085-10.jpg
 As part of my day-to-day job, I'm assigned to developing a tool for monitoring [domainsquatting][wiki-cybersquatting] for a client. One narrow, but very interesting and nerdy, technique for domainsquatting is bitflipping where indiviual bits get flipped in the domain and an attacker tries to fetch misdirected traffic. This series of blogpost intends to describe the attack vector, how to configure BIND for bitflipping and how to detect it.
 
 ### What is bitflipping
+
 So strings are stored in memory and on disk in bits and bytes, ones and zeros, right? A capital `A` is represented as `0100 0001` while a lower case `a` is `0110 0001`.
 
 ```ruby
@@ -31,6 +32,7 @@ irb(main)> "01100101".to_i(2).chr
 A bitflip can occur for a number of reasons; when writing a file to disk, due to overheating in memory or by interference in transit etc. With recent techniques, such as [rowhammer][googlezero-rowhammer] and [FFS][usenix-ffs], it is possible to force a bit error in memory. With the growing occurence of shared resources in the cloud, an attacker can utilize the bit errors for privilege escalation, in-browser exploitation, and selective information disclosure.
 
 ### What is bitsquatting
+
 Bitsquatting is the act of registering bitflipped domains in an attempt to abuse the misdirected traffic trickling in to the server, caused by bitflips in the domain name at the client or supporting servers (such as proxies, DNS or Web servers). First introduced by Artem Dinaburg back in 2011 on [DEF CON 19][dinaburg-defcon19], the attack vector has been proven to be [used][bitsquatting_www2013] and [useful][schultz-defcon21] in the wild.
 
 Artem Dinaburg conducted empirical research by registering 32 bitflipped versions of high-traffic domains belonging to Facebook, Microsoft, Google, Amazon, and Akamai. Except for three events that caused significant traffic spikes, an average of 59 request per day trickled in to the server. This was back in 2011 and [according to Wikipedia][wiki-traffic] the global traffic has increased 2.3 times between 2011 and 2015. Dinaburg’s research suggests that mobile devices are particularly susceptible for bitflipping in memory and the mobile traffic has increased 6.2 times since the research.
@@ -42,36 +44,42 @@ Jaeson Schultz presented on [DEF CON 21][schultz-defcon21] (and published a [whi
 
 
 ### Tools
+
 There exist a couple of ready-to-use tools to generate bitflipped domains. Here are a couple of them.
 
 #### BitSquat
+
 Created by the original researcher, Artem Dinaburg, this tool is capable of generating bitflipped permutations of a single domain and verify if the domain resolves (translates from domain to IP) or not.
 
 [http://dinaburg.org/data/bitsquat.py][tool-bitsquat]  
 [https://github.com/artemdinaburg/bitsquat-script][github-bitsquat]
 
-
 #### FitBlipper
+
 Similar to BitSquat, but instead of resolving the domain it verifies if the domain is registered or not through a WHOIS lookup. This is more reliable since a domain can be registered but don’t resolve to anything yet, but keep in mind that automated WHOIS lookups against the WHOIS servers are usually not allowed.
 
 [https://github.com/chadillac/FitBlipper][github-fitblipper]
 
 #### bitsquat_rpz.pl
+
 Created by Jaeson Schultz, this tool is able to generate [Response Policy Zones (RPZ)][wiki-rpz] to be loaded in your organizations internal DNS, to protect your users for potentially malicious upstream lookups.
 
 The original URL is dead, but a mirror exist on GitHub: [https://gist.github.com/symm/7856106][github-schultz-mirror]
 
 #### dnstwist
+
 dnstwist is a generic tool capable of generating a wide range of domain permutations, including bitflipped domains. It also verify if the domain is registered or not.
 
 [https://github.com/elceef/dnstwist][github-dnstwist]
 
 #### URLCrazy
+
 Just like dnstwist, this tool is a generic domain generating and resolving tool capable of, among others, checking bitflipped domains. Included in a standard version of Kali.
 
 [https://www.morningstarsecurity.com/research/urlcrazy][tool-urlcrazy]
 
 ### References
+
 * [Wikipedia: Cybersquatting][wiki-cybersquatting]
 * [Wikipedia: Internet_traffic][wiki-traffic]
 * [Wikipedia: Response policy zone][wiki-rpz]
@@ -98,9 +106,11 @@ Cover photo "Old memories" by Csaba J. Szabo, from [FreeImages.com](http://www.f
 [github-dnstwist]: https://github.com/elceef/dnstwist
 [tool-urlcrazy]: https://www.morningstarsecurity.com/research/urlcrazy
 [dinaburg-bitsquatting]: http://dinaburg.org/bitsquatting.html
+[dinaburg-slides]: http://dinaburg.org/data/DC19_Dinaburg_Presentation.pdf
 [dinaburg-defcon19]: https://www.youtube.com/watch?v=lZ8s1JwtNas
 [dinaburg-blackhat2011]: https://www.youtube.com/watch?v=_si0FYl_IOA/
 [schultz-defcon21]: https://www.youtube.com/watch?v=j2FVFVHVvgg
+[schultz-slides]: http://archive.icann.org/meetings/buenosaires2013/en/schedule/mon-tech/presentation-bitsquatting-18nov13-en.pdf
 [schultz-bitsquat_rpz]: http://data.0xfeedcafe.com/bitsquat_rpz.pl
 [schultz-whitepaper]: http://blogs.cisco.com/wp-content/uploads/Schultz-Examining_the_Bitsquatting_Attack_Surface-whitepaper.pdf
 [github-schultz-mirror]: https://gist.github.com/symm/7856106

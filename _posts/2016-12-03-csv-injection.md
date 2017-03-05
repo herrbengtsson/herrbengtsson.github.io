@@ -2,11 +2,9 @@
 layout: post
 title:  "CSV Injection"
 description: ""
-date:   2016-12-03 18:04:58 +0100
+date:   2016-12-03 18:04:58 +0000
 categories: [CSV, Attack vectors, Test files, Mental notes]
 ---
-
-### Introduction
 
 CSV injection is the technique to leverage the fact that Excel executes the formulas embedded in a [CSV][wiki-csv]. The technique has been [covered][contextis] by [plenty][securelayer7] of [others][zsec-dangers-mitigation], and even used successfully in [bug][hackerone-hackerone] [bounties][zsec-pornhub], so I will not repeat myself.
 

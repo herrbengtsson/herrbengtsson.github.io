@@ -2,11 +2,9 @@
 layout: post
 title:  "Burp Intruder Attack Types"
 description: ""
-date:   2017-02-04 12:05:32 +0100
+date:   2017-02-04 12:05:32 +0000
 categories: [Burp, Fuzzing, Mental notes]
 ---
-
-### Introduction
 
 This is just a mental note since I keep forgetting how the different Burp Suite intruder attack types work.
 
@@ -19,6 +17,7 @@ This is just a mental note since I keep forgetting how the different Burp Suite 
 | three | drei | trois |      |     |
 
 ### Basic request
+
 ```
 GET /page?param1=§p1§&param2=§p2§&param3=§p3§
 ```
